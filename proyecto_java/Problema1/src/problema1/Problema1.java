@@ -1,4 +1,8 @@
-
+/*
+ * To change this license hea+der, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ and open the template in the editor.
+ */
 package problema1;
 
 import java.util.Scanner;
@@ -9,9 +13,6 @@ import java.util.Scanner;
  */
 public class Problema1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         String[] areas = {"Futbol", "Natacion", "Atletismo", "Basquetbol", "Ciclismo", "Tenis", "Yoga"};
@@ -21,7 +22,7 @@ public class Problema1 {
         while (bandera) {
             System.out.println("Ingrese la opcion a la que desea aplicar: ");
             for (int i = 0; i < areas.length; i++) {
-                System.out.println((i + 1) + "." + areas[i] + "(" + (i + 1) + ")");
+                System.out.println((i + 1) + "." + "Para " + areas[i] + " ingrese: " + "(" + (i + 1) + ")");
             }
             opcion = entrada.nextInt();
             switch (opcion) {
@@ -37,7 +38,7 @@ public class Problema1 {
                     registrarParticipanteAtletismo();
                     resultados[2] = resultados[2] + 1;
                     break;
-                /* case (4):
+                case (4):
                     registrarParticipanteBasquetbol();
                     resultados[3] = resultados[3] + 1;
                     break;
@@ -45,7 +46,7 @@ public class Problema1 {
                     registrarParticipanteCiclismo();
                     resultados[4] = resultados[4] + 1;
                     break;
-                case (6):
+                /*case (6):
                     registrarParticipanteTenis();
                     resultados[5]=resultados[5]+1;
                     break;
@@ -108,14 +109,62 @@ public class Problema1 {
         nivel = entrada.nextLine();
         System.out.println("Ingrese la ciudad del participante:");
         ciudad = entrada.nextLine();
-        System.out.println("Ingrese el estilo favorito del participante:");
+        System.out.println("Ingrese el estilo del participante:");
         estilo = entrada.nextLine();
-        System.out.printf("Datos\nNombre: %s\nEdad: %d\nNivel: %s\nCiudad: %s\n: %s\n", nombre,
+        System.out.printf("Datos\nNombre: %s\nEdad: %d\nNivel: %s\nCiudad: %s\n: Estilo %s\n", nombre,
                 edad, nivel, ciudad, estilo);
 
     }
 
     public static void registrarParticipanteAtletismo() {
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int edad;
+        String especialidad;
+        String ciudad;
+        double record;
+        System.out.println("Ingrese el nombre del participante:");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese la edad del participante:");
+        edad = entrada.nextInt();
+        entrada.nextLine();
+        System.out.println("Ingrese la especialidad del pariticpante(carreras, salto, lanzamiento):");
+        especialidad = entrada.nextLine();
+        System.out.println("Ingrese la ciudad del participante:");
+        ciudad = entrada.nextLine();
+        System.out.println("Ingrese el record del participante:");
+        record = entrada.nextDouble();
+        System.out.printf("Datos\nNombre: %s\nEdad: %d\nEspecialidad: %s\nCiudad: %s\n Record %.2f\n",
+                nombre, edad, especialidad, ciudad, record);
+
+    }
+
+    public static void registrarParticipanteBasquetbol() {
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int edad;
+        String posicion;
+        double estatura;
+        String ciudad;
+        System.out.println("Ingrese el nombre del participante:");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese la edad del participante:");
+        edad = entrada.nextInt();
+        entrada.nextLine();
+        System.out.println("Ingrese la posicion del participante:");
+        posicion = entrada.nextLine();
+        System.out.println("Ingrese la estatura del participante:");
+        estatura = entrada.nextDouble();
+        entrada.nextLine();
+        System.out.println("Ingrese la ciudad del participante:");
+        ciudad = entrada.nextLine();
+        System.out.printf("Datos\nNombre: %s\nEdad: %d\nPosicion: %s\nEstatura: %.2f\n Ciudad %s\n",
+                nombre, edad, posicion, estatura, ciudad);
+    }
+
+    public static void registrarParticipanteCiclismo() {
+        Scanner entrada = new Scanner(System.in);
+        
 
     }
 }
