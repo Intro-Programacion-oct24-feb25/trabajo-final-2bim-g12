@@ -2,7 +2,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  * */
-package problema1;
+package trabajofinal;
 
 import java.util.Scanner;
 import registroFutbol.registroFutbol;
@@ -26,7 +26,7 @@ public class Problema1 {
         int opcion;
         int numeroCuentas = 0;
         boolean bandera = true;
-        do {
+        while (bandera) {
             System.out.println("Ingrese la opcion a la que desea aplicar: ");
             for (int i = 0; i < areas.length; i++) {
                 System.out.println((i + 1) + "." + "Para " + areas[i] + " ingrese: " + "(" + (i + 1) + ")");
@@ -75,9 +75,10 @@ public class Problema1 {
                     break;
             }
 
-        } while (bandera);
+        } 
 
         obtenerInformacion(numeroCuentas);
+        obtenerReporte(areas, resultados);
     }
 
     public static void obtenerInformacion(int num) {
@@ -86,10 +87,10 @@ public class Problema1 {
             mensaje = "Poca partitipacion en el club, hay que mejorar.";
         } else {
             if (num > 5 && num <= 16) {
-                mensaje = "Buena participacion, sigan asi";
+                mensaje = "Buena participacion, sigan asi.";
             } else {
                 if (num < 16) {
-                    mensaje = "Excelente campaña del club";
+                    mensaje = "Excelente campaña del club.";
                 } else {
                     if (num < 1) {
                         mensaje = "Mala campaña, debemos mejorar.";
@@ -100,4 +101,11 @@ public class Problema1 {
         System.out.printf("%s\n", mensaje);
     }
     
+    public static void obtenerReporte(String [] areas, int[] participantes){
+        String cadena = ("Las actividades ingresadas son:\n");
+        for (int i = 0; i < areas.length; i++) {
+            cadena = (cadena+(i + 1) + ". Número de Participantes de " + areas[i] + ": " + participantes[i]+"\n");
+    }
+        System.out.println(cadena);
+    }
 }
