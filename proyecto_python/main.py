@@ -8,6 +8,7 @@ from Procedimientos.registroTenis import registrarParticipanteTenis
 from Procedimientos.registroYoga import registrarParticipanteYoga
 
 
+
 def obtenerInformacion(num):
     if num > 0 & num <= 5:
         print ("Poca partitipacion en el club, hay que mejorar.")
