@@ -10,13 +10,15 @@ import java.util.Scanner;
  * @author ASUS
  */
 public class registroFutbol {
-    public static void registrarParticipanteFutbol() {
+    public static String  registrarParticipanteFutbol() {
         Scanner entrada = new Scanner(System.in);
         String nombre;
         int edad;
         String posicion;
         String ciudad;
         String equipo;
+        String cadena;
+        
         System.out.println("Ingrese el nombre del participante:");
         nombre = entrada.nextLine();
         System.out.println("Ingrese la edad del participante:");
@@ -28,8 +30,11 @@ public class registroFutbol {
         ciudad = entrada.nextLine();
         System.out.println("Ingrese el equipo favorito del participante:");
         equipo = entrada.nextLine();
-        System.out.printf("Datos\nNombre: %s\nEdad: %d\nPosicion: %s\nCiudad: %s\nEquipo: %s\n", nombre,
+        
+        cadena= String.format("Datos\nNombre: %s\nEdad: %d\nPosicion: %s\nCiudad: %s\nEquipo: %s\n", nombre,
                 edad, posicion, ciudad, equipo);
+        
+        return cadena;
 
     }
     

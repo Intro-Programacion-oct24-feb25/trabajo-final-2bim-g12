@@ -11,13 +11,14 @@ import java.util.Scanner;
  * @author ASUS
  */
 public class registroTenis {
-    public static void registrarParticipanteTenis(){
+    public static String registrarParticipanteTenis(){
         Scanner entrada = new Scanner(System.in);
         String nombre;
         int edad;
         String nivel;
         String ciudad;
         String manoHabil;
+        String cadena;
         System.out.println("Ingrese el nombre del pariticipante:");
         nombre = entrada.nextLine();
         System.out.println("Ingrese la edad del participante:");
@@ -29,8 +30,9 @@ public class registroTenis {
         ciudad = entrada.nextLine();
         System.out.println("ingrese la mano habil del participante (Derecha/Izquierda):");
         manoHabil = entrada.nextLine();
-        System.out.printf("Datos\nNombre: %s\nEdad: %s\nNivel: %s\nCiudad: %s\n Mano Habil: %s\n",
+        cadena = String.format("Datos\nNombre: %s\nEdad: %s\nNivel: %s\nCiudad: %s\n Mano Habil: %s\n",
                 nombre, edad, nivel, ciudad, manoHabil);
+        return cadena;
     }
     
 }

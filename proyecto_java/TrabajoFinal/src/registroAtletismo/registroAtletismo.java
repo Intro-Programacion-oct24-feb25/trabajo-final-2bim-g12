@@ -11,13 +11,15 @@ import java.util.Scanner;
  * @author ASUS
  */
 public class registroAtletismo {
-    public static void registrarParticipanteAtletismo() {
+    public static String registrarParticipanteAtletismo() {
         Scanner entrada = new Scanner(System.in);
         String nombre;
         int edad;
         String especialidad;
         String ciudad;
         double record;
+        String cadena;
+        
         System.out.println("Ingrese el nombre del participante:");
         nombre = entrada.nextLine();
         System.out.println("Ingrese la edad del participante:");
@@ -29,8 +31,11 @@ public class registroAtletismo {
         ciudad = entrada.nextLine();
         System.out.println("Ingrese el record del participante:");
         record = entrada.nextDouble();
-        System.out.printf("Datos\nNombre: %s\nEdad: %d\nEspecialidad: %s\nCiudad: %s\n Record %.2f\n",
+        
+        cadena = String.format("Datos\nNombre: %s\nEdad: %d\nEspecialidad: %s\nCiudad: %s\n Record %.2f\n",
                 nombre, edad, especialidad, ciudad, record);
+        
+        return cadena;
 
     }
 }

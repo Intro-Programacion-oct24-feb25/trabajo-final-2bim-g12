@@ -12,13 +12,14 @@ import java.util.Scanner;
  * @author ASUS
  */
 public class registroNatacion {
-    public static void registrarParticipanteNatacion() {
+    public static String registrarParticipanteNatacion() {
         Scanner entrada = new Scanner(System.in);
         String nombre;
         int edad;
         String nivel;
         String ciudad;
         String estilo;
+        String cadena;
         System.out.println("Ingrese el nombre del participante:");
         nombre = entrada.nextLine();
         System.out.println("Ingrese la edad del participante:");
@@ -30,8 +31,9 @@ public class registroNatacion {
         ciudad = entrada.nextLine();
         System.out.println("Ingrese el estilo del participante:");
         estilo = entrada.nextLine();
-        System.out.printf("Datos\nNombre: %s\nEdad: %d\nNivel: %s\nCiudad: %s\n: Estilo %s\n", nombre,
+        cadena = String.format("Datos\nNombre: %s\nEdad: %d\nNivel: %s\nCiudad: %s\n: Estilo %s\n", nombre,
                 edad, nivel, ciudad, estilo);
+        return cadena;
 
     }
     
