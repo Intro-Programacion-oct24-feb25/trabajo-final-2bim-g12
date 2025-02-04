@@ -6,29 +6,9 @@ from Procedimientos.registroBasquetbol import registrarParticipanteBasquetbol
 from Procedimientos.registroCiclismo import registrarParticipanteCiclismo
 from Procedimientos.registroTenis import registrarParticipanteTenis
 from Procedimientos.registroYoga import registrarParticipanteYoga
+from Funciones.informacion import obtenerInformacion
+from Funciones.reporte import obtenerReporte
 
-
-
-def obtenerInformacion(num):
-    if num > 0 & num <= 5:
-        print ("Poca partitipacion en el club, hay que mejorar.")
-    elif num > 5 & num <= 16:
-        print ("Buena participacion, sigan asi.")
-    elif num > 16:
-        print ("Excelente campaña del club.")
-    else:
-        print ("Mala campaña debemos mejorar.")
-
-def obtenerReporte(areas, resultados):
-    cadena = "Las actividades ingresadas fueron:\n"
-    pos = 0
-    for area in enumerate(areas):
-        #print(resultados[pos])
-        #print(area[1])
-        #cadena = cadena +  + ". Número de Participantes de " + ": "+"\n"
-        cadena = cadena + str(pos+1)  + ". Número de Participantes de " + area[1] + ": " + str(resultados[pos])+"\n"
-        pos += 1
-    print (cadena)
 
 def main():
     
@@ -79,8 +59,8 @@ def main():
             bandera = False
 
 
-    obtenerInformacion(numeroCuentas)
-    obtenerReporte(areas, resultados)
+    informacion = obtenerInformacion(numeroCuentas)
+    reporte = obtenerReporte(areas, resultados)
 
 main()
             
