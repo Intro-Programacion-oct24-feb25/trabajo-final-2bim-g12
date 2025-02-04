@@ -5,4 +5,8 @@ def registrarParticipanteAtletismo():
     ciudad = input("Ingrese la ciudad del participante: ")
     record = float(input("Ingrese el record del participante: "))
 
-    print (f"Datos\nNombre: {nombre}\nEdad: {edad}\nEspecialidad: {especialidad}\nCiudad: {ciudad}\Record: {record}\n")
+    cadena = (f"Datos\nNombre: {nombre}\nEdad: {edad}\nEspecialidad: {especialidad}\nCiudad: {ciudad}\Record: {record}\n")
+
+    return cadena
+
+    

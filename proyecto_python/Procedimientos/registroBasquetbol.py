@@ -5,4 +5,6 @@ def registrarParticipanteBasquetbol():
     estatura = float(input("Ingrese la estatura del participante: "))
     ciudad = input("Ingrese la ciudad del participante: ")
 
-    print(f"Datos\nNombre: {nombre}\nEdad: {edad}\Posicion: {posicion}\nEstatura: {estatura}\Ciudad: {ciudad}\n")
+    cadena=(f"Datos:\nNombre: {nombre}\nEdad: {edad}\Posicion: {posicion}\nEstatura: {estatura}\Ciudad: {ciudad}\n")
+
+    return cadena

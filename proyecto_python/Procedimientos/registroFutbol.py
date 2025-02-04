@@ -5,4 +5,7 @@ def registrarParticipanteFutbol():
     ciudad = input("Ingrese la ciudad del participante: ")
     equipo = input("Ingrese el equipo del participante: ")
 
-    print (f"Datos\nNombre: {nombre}\nEdad: {edad}\nPosicion: {posicion}\nCiudad: {ciudad}\nEquipo: {equipo}\n")
+
+    cadena = (f"Datos:\nNombre: {nombre}\nEdad: {edad}\nPosicion: {posicion}\nCiudad: {ciudad}\nEquipo: {equipo}\n")
+
+    return cadena

@@ -5,4 +5,6 @@ def registrarParticipanteNatacion():
     ciudad = input("Ingrese la ciudad del participante: ")
     estilo = input("Ingrese el estilo de nado del participante: ")
 
-    print (f"Datos\nNombre: {nombre}\nEdad: {edad}\nNivel: {nivel}\nCiudad: {ciudad}\nEstilo: {estilo}\n")
+    cadena = (f"Datos:\nNombre: {nombre}\nEdad: {edad}\nNivel: {nivel}\nCiudad: {ciudad}\nEstilo: {estilo}\n")
+
+    return cadena

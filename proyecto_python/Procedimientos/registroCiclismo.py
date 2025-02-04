@@ -5,4 +5,7 @@ def registrarParticipanteCiclismo():
     ciudad = input("Ingrese la ciudad del participante: ")
     marca = input("Ingrese la marca de bicicletas favorita del participante: ")
 
-    print(f"Datos\nNombre: {nombre}\nEdad: {edad}\Tipo de Ciclismo: {tipo}\nMarca favorita: {marca}\Ciudad: {ciudad}\n")
+
+    cadena=(f"Datos:\nNombre: {nombre}\nEdad: {edad}\Tipo de Ciclismo: {tipo}\nMarca favorita: {marca}\Ciudad: {ciudad}\n")
+
+    return cadena
